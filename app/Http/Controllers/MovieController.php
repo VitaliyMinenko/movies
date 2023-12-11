@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
@@ -10,12 +11,11 @@ use Symfony\Component\HttpFoundation\Response;
 
 class MovieController extends Controller
 {
-    /**
-     * @param MovieRepository $movieRepository
-     */
-    public function __construct(
-        private readonly MovieRepository $movieRepository,
-    ) {
+    private MovieRepository $movieRepository;
+
+    public function __construct(MovieRepository $movieSource)
+    {
+        $this->movieRepository = $movieSource;
     }
 
     /**
@@ -35,7 +35,7 @@ class MovieController extends Controller
             return response()->json(['data' => $result]);
 
         } catch (\Exception $e) {
-            Log::error($e);
+            Log::error((string)$e);
             return response()->json(['error' => 'Something went wrong'], Response::HTTP_INTERNAL_SERVER_ERROR);
         }
     }

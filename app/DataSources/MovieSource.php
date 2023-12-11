@@ -12,9 +12,11 @@ class MovieSource
         $this->loadMovies();
     }
 
-    public function loadMovies()
+    /**
+     * @return void
+     */
+    private function loadMovies()
     {
-
         $this->movies = [
             "PulpFiction",
             "Inception",
@@ -104,6 +106,9 @@ class MovieSource
         ];
     }
 
+    /**
+     * @return Collection
+     */
     public function getMovies(): Collection
     {
         return collect($this->movies);
