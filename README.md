@@ -1,26 +1,27 @@
-# Serves for filtering movies.
+# Movies service
 #### Version 1.0b
 #### Author: Vitalii Minenko
 
 A simple application showing movies by 3 different filters.
 
-##### Requriments
+##### Requirements
 * Docker
 * WSL 2.0
 * PowerShell
 * IDE
 * Postman
-##### Haw to start.
-* For start application you should install docker and set WSL engine.
-* Clone application into the folder with docker.
-* Copy .env.example to .env at main folder.
-* Open your project with command-line shell application for example PowerShell and do next command.
+
+##### How to start
+* To start the application, you should install Docker and set up WSL engine.
+* Clone the application into the folder with Docker.
+* Copy .env.example to .env in the main folder.
+* Open your project with a command-line shell application, for example, PowerShell, and execute the following command:
 ```
 make up
 ```
-By default, your application will be use http://localhost or http://0.0.0.0
+By default, your application will use http://localhost or http://0.0.0.0
 
-* Now application is ready, and you can use it and test it by web version using SPA by Vue or use Rest API endpoints for example by Postman. Please enjoy ;)
+* Now, the application is ready, and you can use and test it by the web version using SPA by Vue or use Rest API endpoints, for example, by Postman. Please enjoy ;)
 
 ##### Endpoints for filtering movies.
 ```
